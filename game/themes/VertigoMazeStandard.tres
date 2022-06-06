@@ -1,10 +1,6 @@
-[gd_resource type="Theme" load_steps=3 format=2]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bxni7kqb5g2ek"]
 
-[ext_resource path="res://assets/google.com/kdam_thmor_pro/KdamThmorPro-Regular.ttf" type="DynamicFontData" id=1]
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
-font_data = ExtResource( 1 )
+[sub_resource type="Font" id="1"]
 
 [resource]
-default_font = SubResource( 1 )
+default_font = SubResource( "1" )

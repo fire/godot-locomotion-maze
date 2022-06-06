@@ -7,13 +7,14 @@ signal fade_complete(id)
 
 
 # Material for fading
-var _fade_material : SpatialMaterial
+var _fade_material : StandardMaterial3D
 
 # Fade ID
 var _fade_id : String
 
 # Tween for fading
-onready var _fade_tween : Tween = $FPController/ARVRCamera/Tween
+@onready
+var _fade_tween 
 
 
 # Called when the node enters the scene tree for the first time.

@@ -3,4 +3,4 @@ extends Node
 
 
 # Map scene
-export (PackedScene) var map_scene = null
+@export var map_scene : PackedScene= null

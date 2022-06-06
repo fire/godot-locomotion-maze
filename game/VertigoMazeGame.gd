@@ -6,7 +6,8 @@ var level_index := 0
 
 var current_level : MapBase = null
 
-onready var levels : Array = $Levels.get_children()
+@onready
+var levels : Array = $Levels.get_children()
 
 
 func _ready():
@@ -23,7 +24,7 @@ func _load_level():
 	# Construct the level
 	current_level = levels[level_index].map_scene.instance()
 	add_child(current_level)
-	current_level.connect("map_complete", self, "_on_map_complete")
+	current_level.connect("map_complete", Callable(self, "_on_map_complete"))
 
 
 func _on_map_complete():

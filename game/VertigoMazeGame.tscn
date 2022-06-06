@@ -1,53 +1,53 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=13 format=3 uid="uid://dtfhu7ks24644"]
 
-[ext_resource path="res://game/VertigoMazeGame.gd" type="Script" id=1]
-[ext_resource path="res://game/MapLevel.tscn" type="PackedScene" id=2]
-[ext_resource path="res://game/maps/learn/LearnGlidingMap.tscn" type="PackedScene" id=3]
-[ext_resource path="res://game/maps/learn/LearnClimbingMap.tscn" type="PackedScene" id=4]
-[ext_resource path="res://game/maps/learn/LearnGrapplingMap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://game/maps/welcome/WelcomeMap.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/freepd.com/Experimental Test Subject.mp3" type="AudioStream" id=7]
-[ext_resource path="res://game/maps/learn/LearnJumpPadMap.tscn" type="PackedScene" id=8]
-[ext_resource path="res://game/maps/learn/LearnWindMap.tscn" type="PackedScene" id=9]
-[ext_resource path="res://game/maps/learn/LearnCarryingMap.tscn" type="PackedScene" id=10]
-[ext_resource path="res://game/maps/tests/TestMedium.tscn" type="PackedScene" id=11]
-[ext_resource path="res://game/maps/finished/FinishedMap.tscn" type="PackedScene" id=12]
+[ext_resource type="Script" path="res://game/VertigoMazeGame.gd" id="1"]
+[ext_resource type="PackedScene" path="res://game/MapLevel.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://game/maps/learn/LearnGlidingMap.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://game/maps/learn/LearnClimbingMap.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://game/maps/learn/LearnGrapplingMap.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://game/maps/welcome/WelcomeMap.tscn" id="6"]
+[ext_resource type="AudioStream" uid="uid://toahd8sqew06" path="res://assets/freepd.com/Experimental Test Subject.mp3" id="7"]
+[ext_resource type="PackedScene" path="res://game/maps/learn/LearnJumpPadMap.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://game/maps/learn/LearnWindMap.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://game/maps/learn/LearnCarryingMap.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://game/maps/tests/TestMedium.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://game/maps/finished/FinishedMap.tscn" id="12"]
 
-[node name="VertigoMazeGame" type="Spatial"]
-script = ExtResource( 1 )
+[node name="VertigoMazeGame" type="Node3D"]
+script = ExtResource( "1" )
 
 [node name="Levels" type="Node" parent="."]
 
-[node name="Welcome" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 6 )
+[node name="Welcome" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "6" )
 
-[node name="LearnGliding" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 3 )
+[node name="LearnGliding" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "3" )
 
-[node name="LearnClimbing" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 4 )
+[node name="LearnClimbing" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "4" )
 
-[node name="LearnGrappling" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 5 )
+[node name="LearnGrappling" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "5" )
 
-[node name="LearnJumpPad" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 8 )
+[node name="LearnJumpPad" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "8" )
 
-[node name="LearnWind" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 9 )
+[node name="LearnWind" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "9" )
 
-[node name="LearnCarrying" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 10 )
+[node name="LearnCarrying" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "10" )
 
-[node name="TestMedium" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 11 )
+[node name="TestMedium" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "11" )
 
-[node name="Finished" parent="Levels" instance=ExtResource( 2 )]
-map_scene = ExtResource( 12 )
+[node name="Finished" parent="Levels" instance=ExtResource( "2" )]
+map_scene = ExtResource( "12" )
 
 [node name="Sounds" type="Node" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource( 7 )
+stream = ExtResource( "7" )
 volume_db = -9.0
 autoplay = true

@@ -6,8 +6,12 @@ signal target_triggered(target)
 
 
 # Enabled property
-export var enabled := true setget _enabled_set
-
+@export
+var enabled: bool:
+	set(value):
+		_enabled_set(value)
+	get:
+		return enabled
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
