@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://dtfhu7ks24644"]
 
 [ext_resource type="Script" path="res://game/VertigoMazeGame.gd" id="1"]
-[ext_resource type="PackedScene" path="res://game/MapLevel.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://de5gjoso1a2gb" path="res://game/MapLevel.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://game/maps/learn/LearnGlidingMap.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://game/maps/learn/LearnClimbingMap.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://game/maps/learn/LearnGrapplingMap.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://game/maps/welcome/WelcomeMap.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://i6nd0oy6qxgw" path="res://game/maps/welcome/WelcomeMap.tscn" id="6"]
 [ext_resource type="AudioStream" uid="uid://toahd8sqew06" path="res://assets/freepd.com/Experimental Test Subject.mp3" id="7"]
 [ext_resource type="PackedScene" path="res://game/maps/learn/LearnJumpPadMap.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://game/maps/learn/LearnWindMap.tscn" id="9"]

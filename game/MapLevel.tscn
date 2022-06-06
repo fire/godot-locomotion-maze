@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://de5gjoso1a2gb"]
 
-[ext_resource path="res://game/MapLevel.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://game/MapLevel.gd" id="1"]
 
 [node name="MapLevel" type="Node"]
-script = ExtResource( 1 )
+script = ExtResource( "1" )
