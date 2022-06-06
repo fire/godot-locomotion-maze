@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dnn8wfxiaelut"]
 
-[ext_resource path="res://addons/godot-xr-tools/functions/Function_Wind_movement.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/functions/Function_Wind_movement.gd" id="1"]
 
-[sub_resource type="SphereShape" id=1]
+[sub_resource type="SphereShape3D" id="1"]
 radius = 0.3
 
 [node name="Function_Wind_movement" type="Node" groups=["movement_providers"]]
-script = ExtResource( 1 )
+script = ExtResource( "1" )
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 524288
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource( 1 )
+shape = SubResource( "1" )
