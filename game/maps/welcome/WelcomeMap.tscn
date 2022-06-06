@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://i6nd0oy6qxgw"]
 
-[ext_resource type="PackedScene" path="res://game/terrain/FloorRise.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://3ecrdn4u0rcj" path="res://game/terrain/FloorRise.tscn" id="1"]
 [ext_resource type="Script" path="res://game/maps/welcome/WelcomeMap.gd" id="2"]
-[ext_resource type="PackedScene" path="res://game/player/Player.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://game/rooms/SmallRoom.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://game/ui/WelcomeScreen.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://guvgd7si85c0" path="res://game/player/Player.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cpvptmqqjtejw" path="res://game/rooms/SmallRoom.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b2icxtwj8rqx6" path="res://game/ui/WelcomeScreen.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://addons/godot-xr-tools/objects/Viewport_2D_in_3D.tscn" id="6"]
 
 [node name="WelcomeMap" type="Node3D"]

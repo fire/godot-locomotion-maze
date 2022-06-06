@@ -22,7 +22,7 @@ func _load_level():
 		current_level.queue_free()
 		
 	# Construct the level
-	current_level = levels[level_index].map_scene.instance()
+	current_level = levels[level_index].map_scene.instantiate()
 	add_child(current_level)
 	current_level.connect("map_complete", Callable(self, "_on_map_complete"))
 

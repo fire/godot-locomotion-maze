@@ -52,7 +52,7 @@ enabled = false
 [node name="FPController@ARVRCamera@MeshInstance" type="MeshInstance3D" parent="."]
 mesh = SubResource( "1" )
 
-[node name="FPController@ARVRCamera@Tween" type="Tween" parent="."]
+[node name="FPControllerARVRCameraTween" type="Tween" parent="."]
 _import_path = NodePath("")
 unique_name_in_owner = false
 process_mode = 0

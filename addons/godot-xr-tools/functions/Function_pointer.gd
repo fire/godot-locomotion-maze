@@ -43,7 +43,7 @@ func _update_y_offset():
 func _update_distance():
 	$Laser.mesh.size.z = distance
 	$Laser.position.z = distance * -0.5
-	$RayCast.cast_to.z = -distance
+	$RayCast.target_position.z = -distance
 
 @export_flags_3d_physics  var collision_mask = 15:
 	set(new_value):
@@ -116,7 +116,7 @@ func _ready():
 		return
 
 	# Get button press feedback from our parent (should be an XRController3D)
-	get_parent().connect("button_pressed", _on_button_pressed)
+	get_parent().connect("pressed", _on_button_pressed)
 	get_parent().connect("button_released", _on_button_released)
 	
 	# init our state

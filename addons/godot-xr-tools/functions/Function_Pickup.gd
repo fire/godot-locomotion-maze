@@ -103,7 +103,7 @@ func _ready():
 	if Engine.is_editor_hint():
 		return
 
-	get_parent().connect("button_pressed", _on_button_pressed)
+	get_parent().connect("pressed", _on_button_pressed)
 	get_parent().connect("button_released", _on_button_released)
 
 	_update_pickup_range()

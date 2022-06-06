@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://ds4c4um1qd0jm"]
 
-[ext_resource type="PackedScene" path="res://game/terrain/Block.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://game/targets/Target.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://game/terrain/Platform.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://game/rooms/SmallRoom.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://btuq445c5m70i" path="res://game/terrain/Block.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://8lo4vobd674c" path="res://game/targets/Target.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cijjc0ojluo8t" path="res://game/terrain/Platform.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cpvptmqqjtejw" path="res://game/rooms/SmallRoom.tscn" id="4"]
 [ext_resource type="AudioStream" uid="uid://doy8hq0416xdq" path="res://assets/readloud.net/LearnWind.mp3" id="5"]
-[ext_resource type="PackedScene" path="res://game/terrain/Ramp.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://game/player/Player.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://b2aluga5fdtti" path="res://game/terrain/Ramp.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://guvgd7si85c0" path="res://game/player/Player.tscn" id="7"]
 [ext_resource type="Script" path="res://game/maps/learn/LearnWindMap.gd" id="8"]
 [ext_resource type="PackedScene" uid="uid://m7et8p1b67ax" path="res://game/equipment/Wind15.tscn" id="9"]
 

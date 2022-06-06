@@ -55,7 +55,9 @@ var _turn_step := 0.0
 
 
 # Controller node
-@onready var _controller : XRController3D = get_parent()
+# TODO: 2022-06-05 find out why it's not a XRController
+@onready
+var _controller : XRController3D = get_parent()
 
 
 func _ready():
