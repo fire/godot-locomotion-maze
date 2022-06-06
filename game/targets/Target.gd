@@ -1,5 +1,5 @@
 class_name Target
-extends Spatial
+extends Node3D
 
 
 signal target_triggered(target)

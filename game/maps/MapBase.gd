@@ -1,5 +1,5 @@
 class_name MapBase
-extends Spatial
+extends Node3D
 
 
 # Map complete signal
