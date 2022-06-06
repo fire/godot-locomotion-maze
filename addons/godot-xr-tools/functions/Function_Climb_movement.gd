@@ -1,6 +1,7 @@
-tool
+@tool
 class_name Function_ClimbMovement
 extends MovementProvider
+
 
 ##
 ## Movement Provider for Climbing
@@ -8,9 +9,9 @@ extends MovementProvider
 ## @desc:
 ##     This script works with the Function_Climb_movement asset to provide
 ##     climbing movement for the player. This script works with the PlayerBody
-##     attached to the players ARVROrigin.
+##     attached to the players XROrigin3D.
 ##
-##     StaticBody objects can be marked as climbable by adding the
+##     StaticBody3D objects can be marked as climbable by adding the
 ##     Object_climbable script to them
 ##
 ##     When climbing, the global velocity of the PlayerBody is averaged for
@@ -18,6 +19,7 @@ extends MovementProvider
 ##     to the PlayerBody so the player can fling themselves up walls if
 ##     desired.
 ##
+
 
 ## Signal invoked when the player starts climing
 signal player_climb_start
@@ -31,22 +33,22 @@ const HORIZONTAL := Vector3(1.0, 0.0, 1.0)
 
 
 ## Movement provider order
-export var order := 15
+@export var order : int = 15
 
 ## Push forward when flinging
-export var forward_push := 1.0
+@export var forward_push : float = 1.0
 
 ## Velocity multiplier when flinging up walls
-export var fling_multiplier := 1.0
+@export var fling_multiplier : float = 1.0
 
 ## Averages for velocity measurement
-export var velocity_averages := 5
+@export var velocity_averages : int = 5
 
 ## Pickup function for the left hand
-export (NodePath) var left_pickup
+@export_node_path(Area3D, Function_Pickup) var left_pickup
 
 ## Pickup function for the right hand
-export (NodePath) var right_pickup
+@export_node_path(Area3D, Function_Pickup) var right_pickup
 
 
 # Velocity averaging fields
@@ -55,13 +57,18 @@ var _deltas = Array()
 
 
 # Node references
-onready var _left_pickup_node: Function_Pickup = get_node(left_pickup)
-onready var _right_pickup_node: Function_Pickup = get_node(right_pickup)
+@onready var _left_pickup_node : Function_Pickup = get_node(left_pickup)
+@onready var _right_pickup_node : Function_Pickup = get_node(right_pickup)
 
 
-func physics_movement(delta: float, player_body: PlayerBody, disabled: bool):
-	# Disable climbing if requested
-	if disabled or !enabled:
+func _ready():
+	# In Godot 4 we must now manually call our super class ready function
+	super._ready()
+
+
+func physics_movement(delta: float, player_body: PlayerBody):
+	# Skip if disabled
+	if !enabled:
 		_set_climbing(false, player_body)
 		return
 
@@ -139,6 +146,7 @@ func _update_velocity(delta: float, distance: Vector3):
 		_distances.pop_front()
 		_deltas.pop_front()
 
+
 # Calculate average player velocity
 func _average_velocity() -> Vector3:
 	# Calculate the total time
@@ -153,6 +161,7 @@ func _average_velocity() -> Vector3:
 
 	# Return the average
 	return total_distance / total_time
+
 
 # This method verifies the MovementProvider has a valid configuration.
 func _get_configuration_warning():
@@ -171,4 +180,4 @@ func _get_configuration_warning():
 		return "Minimum of 2 velocity averages needed"
 
 	# Call base class
-	return ._get_configuration_warning()
+	return super._get_configuration_warning()

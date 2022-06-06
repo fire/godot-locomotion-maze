@@ -2,12 +2,13 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/LearnJumpPads.mp3-685b40b5ad420b6b9c8683bc1694e660.mp3str"
+uid="uid://7reh1f62hv0m"
+path="res://.godot/imported/LearnJumpPads.mp3-685b40b5ad420b6b9c8683bc1694e660.mp3str"
 
 [deps]
 
 source_file="res://assets/readloud.net/LearnJumpPads.mp3"
-dest_files=[ "res://.import/LearnJumpPads.mp3-685b40b5ad420b6b9c8683bc1694e660.mp3str" ]
+dest_files=["res://.godot/imported/LearnJumpPads.mp3-685b40b5ad420b6b9c8683bc1694e660.mp3str"]
 
 [params]
 

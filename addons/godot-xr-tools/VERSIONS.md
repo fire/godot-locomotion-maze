@@ -1,4 +1,5 @@
-# 2.5.0
+# 4.0
+- Port to Godot 4
 
 # 2.4.0
 - Added configuration setting for head height in player body.
@@ -6,11 +7,6 @@
 - Improved responsiveness of snap-turning
 - Moved flight logic from Function_Direct_movement to Function_Flight_movement
 - Added option to disable player sliding on slopes
-- Added support for remote grabbing
-- Moved turning logic from Function_Direct_movement to Function_Turn_movement
-- Fixed movement provider servicing so disabled/bypassed providers can report their finished events
-- Added grappling movement provider
-- Added snap-zones
 
 # 2.3.0
 - Added vignette

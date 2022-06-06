@@ -2,12 +2,13 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/565491__jakegwizdak__wind-loop.mp3-6af6fbc3485ab1187d583e00a38a3ad3.mp3str"
+uid="uid://dxo5pespkg01s"
+path="res://.godot/imported/565491__jakegwizdak__wind-loop.mp3-6af6fbc3485ab1187d583e00a38a3ad3.mp3str"
 
 [deps]
 
 source_file="res://assets/freesound.org/565491__jakegwizdak__wind-loop.mp3"
-dest_files=[ "res://.import/565491__jakegwizdak__wind-loop.mp3-6af6fbc3485ab1187d583e00a38a3ad3.mp3str" ]
+dest_files=["res://.godot/imported/565491__jakegwizdak__wind-loop.mp3-6af6fbc3485ab1187d583e00a38a3ad3.mp3str"]
 
 [params]
 

@@ -1,4 +1,4 @@
-tool
+@tool
 class_name Function_JumpDetect
 extends MovementProvider
 
@@ -23,22 +23,22 @@ extends MovementProvider
 
 
 ## Movement provider order
-export var order := 20
+@export var order := 20
 
 ## Enable detecting of jump via body (through the camera)
-export var body_jump_enable := true
+@export var body_jump_enable := true
 
 ## Only jump as high as the player (no ground physics)
-export var body_jump_player_only := false
+@export var body_jump_player_only := false
 
 ## Body jump detection threshold (M/S^2)
-export var body_jump_threshold := 2.5
+@export var body_jump_threshold := 2.5
 
 ## Enable detectionm of jump via arms (through the controllers)
-export var arms_jump_enable := false
+@export var arms_jump_enable := false
 
 ## Arms jump detection threshold (M/S^2)
-export var arms_jump_threshold := 5.0
+@export var arms_jump_threshold := 10.0
 
 
 # Sliding Average class
@@ -56,14 +56,14 @@ class SlidingAverage:
 	var _data := Array()
 
 	# Constructor
-	func _init(var size: int):
+	func _init(size: int):
 		# Set the size and fill the array
 		_size = size
 		for i in size:
 			_data.push_back(0.0)
 
 	# Update the average
-	func update(var entry: float) -> float:
+	func update(entry: float) -> float:
 		# Add the new entry and subtract the old
 		_sum += entry
 		_sum -= _data[_pos]
@@ -87,14 +87,14 @@ var _controller_left_velocity := SlidingAverage.new(5)
 var _controller_right_velocity := SlidingAverage.new(5)
 
 # Node references
-onready var _origin_node := ARVRHelpers.get_arvr_origin(self)
-onready var _camera_node := ARVRHelpers.get_arvr_camera(self)
-onready var _controller_left_node := ARVRHelpers.get_left_controller(self)
-onready var _controller_right_node := ARVRHelpers.get_right_controller(self)
+@onready var _origin_node := XRHelpers.get_xr_origin(self)
+@onready var _camera_node := XRHelpers.get_xr_camera(self)
+@onready var _controller_left_node := XRHelpers.get_left_controller(self)
+@onready var _controller_right_node := XRHelpers.get_right_controller(self)
 
 
 # Perform jump detection
-func physics_movement(delta: float, player_body: PlayerBody, _disabled: bool):
+func physics_movement(delta: float, player_body: PlayerBody):
 	# Handle detecting body jump
 	if body_jump_enable:
 		_detect_body_jump(delta, player_body)
@@ -155,3 +155,8 @@ func _detect_arms_jump(delta: float, player_body: PlayerBody) -> void:
 	# Detect a jump
 	if controller_left_vel >= arms_jump_threshold and controller_right_vel >= arms_jump_threshold:
 		player_body.request_jump()
+
+# This method verifies the MovementProvider has a valid configuration.
+func _get_configuration_warning():
+	# Call base class
+	return super._get_configuration_warning()
